@@ -1,0 +1,31 @@
+cabal-version: 1.12
+name:           haskell-dnc-mergesort
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/haskell-dnc-mergesort#readme>
+homepage:       https://github.com/githubuser/haskell-dnc-mergesort#readme
+bug-reports:    https://github.com/githubuser/haskell-dnc-mergesort/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/robstewart57/haskell-dnc-mergesort
+
+executable haskell-dnc-mergesort-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts  -eventlog -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , parallel
+    , deepseq
+    , random
+    , criterion-measurement
+  default-language: Haskell2010
